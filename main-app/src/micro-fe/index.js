@@ -1,3 +1,5 @@
+import { rewriteRouter } from './rewrite-router'
+import { handleRouter } from './handle-router'
 let _apps = []
 
 // 获取微应用列表
@@ -12,13 +14,11 @@ export const registerMicroApps = function (apps) {
 export const start = function () {
     // 微前端运行原理 
     // 1、监视路由变化
-    // hash路由，window.hashChange()
-    // history路由
-    //      history.go、history.back、history.forword 使用popstate事件，window.onpopstate
-    window.addEventListener('popstate', () => {
-        debugger
-        console.log('popstate')
-    })
+    rewriteRouter()
+
+    // 这一步还要注意初始化的时候
+    handleRouter()
+
     // 2、匹配子应用
     // 3、加载子应用
     // 4、渲染子应用
