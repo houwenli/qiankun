@@ -16,13 +16,13 @@ import { registerMicroApps, start } from './micro-fe';
 registerMicroApps([
   {
     name: 'vue1', // app name registered
-    entry: '//localhost:8081',
+    entry: '//localhost:9001',
     container: '#container',
     activeRule: '/subone',
   },
   {
     name: 'vue2',
-    entry: '//localhost:8082',
+    entry: '//localhost:9002',
     container: '#container',
     activeRule: '/subtwo',
   },
