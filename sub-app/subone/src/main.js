@@ -18,7 +18,7 @@ if (!window.__POWERED_BY_QIANKUN__) {
 }
 
 export async function bootstrap() {
-  console.log('react app bootstraped');
+  console.log('subone app bootstraped');
 }
 
 export async function mount(props) {
@@ -30,5 +30,4 @@ export async function unmount() {
   instance.$destroy();
   instance.$el.innerHTML = '';
   instance = null;
-  router = null;
 }
