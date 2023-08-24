@@ -43,6 +43,7 @@ export const handleRouter = async function () {
     window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__ = app.entry + '/'
 
     // 先把入口文件渲染
+    container.innerHTML = '';
     container.prepend(template)
 
     const appExports = await execScripts()

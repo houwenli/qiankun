@@ -10,8 +10,8 @@ new Vue({
   router
 }).$mount('#app')
 
-import { registerMicroApps, start } from 'qiankun';
-// import { registerMicroApps, start } from './micro-fe';
+// import { registerMicroApps, start } from 'qiankun';
+import { registerMicroApps, start } from './micro-fe';
 
 registerMicroApps([
   {
@@ -31,6 +31,6 @@ registerMicroApps([
 start({
   sandbox: {
     // strictStyleIsolation: true
-    experimentalStyleIsolation: true
+    // experimentalStyleIsolation: true
   }
 })
